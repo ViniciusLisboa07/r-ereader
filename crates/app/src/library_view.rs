@@ -42,7 +42,7 @@ const DETAILS_WIDTH: f32 = 340.;
 const CELL_MIN_WIDTH: f32 = 176.;
 const COVER_WIDTH: f32 = 116.;
 const COVER_HEIGHT: f32 = 174.;
-const GRID_ROW_HEIGHT: f32 = 314.;
+const GRID_ROW_HEIGHT: f32 = 340.;
 const LIST_ROW_HEIGHT: f32 = 46.;
 
 pub enum LibraryEvent {
