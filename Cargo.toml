@@ -1,0 +1,17 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+license = "MIT"
+
+# Dependências (GPUI, SQLite, image…) otimizadas mesmo no build de debug: sem isso o
+# layout de capítulos longos fica lento. Nosso código continua compilando rápido.
+[profile.dev.package."*"]
+opt-level = 2
+
+# xattr 0.2.3 (via gpui → zed-async-tar) não compila com libc >= 0.2.190.
+[patch.crates-io]
+xattr = { path = "patches/xattr" }

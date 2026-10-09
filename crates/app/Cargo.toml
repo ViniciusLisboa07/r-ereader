@@ -1,0 +1,16 @@
+[package]
+name = "r-ereader"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+gpui = "0.2.2"
+r-ereader-epub = { version = "0.1.0", path = "../epub" }
+r-ereader-library = { version = "0.1.0", path = "../library" }
+unicode-segmentation = "1.13.3"
+
+[dev-dependencies]
+gpui = { version = "0.2.2", features = ["test-support"] }
+r-ereader-library = { path = "../library", features = ["test-support"] }
+tempfile = "3.27.0"
